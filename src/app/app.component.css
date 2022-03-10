@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.username {
+    margin-right: 15px;
+    font-size: smaller;
+}

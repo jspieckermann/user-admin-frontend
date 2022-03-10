@@ -7,7 +7,7 @@ import { KeycloakService } from 'keycloak-angular';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'user-admin-frontend';
+  title = 'User administration';
   signedIn = false;
   user = '-';
 

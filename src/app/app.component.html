@@ -1,9 +1,14 @@
-
-<button (click)="signin()">Signin</button>
-<button (click)="signout()">Signout</button>
+<p>
+    <mat-toolbar color="primary">
+      <span>{{title}}</span>
+      <span class="example-spacer"></span>
+      <mat-icon>person</mat-icon>
+      <span class="username">{{user}}</span>
+      <button mat-icon-button (click)="signout()" aria-label="Button to logout.">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+</p>
 <app-user-list></app-user-list>
 <router-outlet></router-outlet>
-
-SignedIn: {{signedIn}}
-User: {{user}}
 

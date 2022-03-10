@@ -10,11 +10,10 @@ import { UserService } from '../services/user.service';
 export class UserListComponent implements OnInit {
 
   users: User[] = {} as User[];
-  user: User = {} as User;
+  displayedColumns: string[] = ['name', 'firstname', 'lastname', 'email'];
 
   constructor(userService: UserService) {
-    userService.getUsers().subscribe(data => {this.users = data;} );
-    userService.getUser(1).subscribe(data => {this.user = data;} );
+    userService.getUsers().subscribe(data => {this.users = data;});
   }
 
   ngOnInit(): void {

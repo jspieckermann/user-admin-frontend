@@ -6,6 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button'; 
 
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -33,7 +38,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    KeycloakAngularModule
+    KeycloakAngularModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [
     {
