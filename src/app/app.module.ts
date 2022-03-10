@@ -14,11 +14,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
         config: {
           url: 'http://localhost:8080/',
           realm: 'user-admin-app',
-          clientId: 'user-admin-frontend',
+          clientId: 'user-admin-frontend'
         },
         initOptions: {
-            onLoad: 'login-required'
+          onLoad: 'login-required'
         },
+        loadUserProfileAtStartUp: true,
         bearerExcludedUrls: ['/assets']
       });
 }
