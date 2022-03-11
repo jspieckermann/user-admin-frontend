@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { User } from '../model/model';
 import { UserService } from '../services/user.service';
 
@@ -10,13 +10,14 @@ import { UserService } from '../services/user.service';
 export class UserListComponent implements OnInit {
 
   users: User[] = {} as User[];
-  displayedColumns: string[] = ['name', 'firstname', 'lastname', 'email'];
+  displayedColumns: string[] = ['id', 'name', 'firstname', 'lastname', 'email'];
 
-  constructor(userService: UserService) {
-    userService.getUsers().subscribe(data => {this.users = data;});
+  constructor(private userService: UserService) {
+    
   }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe(data => {this.users = data;});
   }
 
 }

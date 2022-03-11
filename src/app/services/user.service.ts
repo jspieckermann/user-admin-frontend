@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../model/model';
 import { HttpService } from './http.service';
 
@@ -19,4 +19,9 @@ export class UserService {
   public getUser(index: number): Observable<User> {
     return this.http.doGet(this.baseUrl + '/' + index);
   }
+
+  public addUser(user: User): Observable<User> {
+    return this.http.doPost(this.baseUrl, JSON.stringify(user));
+  }
+
 }
