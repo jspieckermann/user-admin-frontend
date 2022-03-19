@@ -19,6 +19,7 @@ export class HttpService {
   }
 
   doPut<T>(url: string, content: string): Observable<T> {
+    console.log('LOG: ' + url);
     const headers = new HttpHeaders().set('content-type', 'application/json');
     return this.http.put<T>(url, content, { headers });
   }

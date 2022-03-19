@@ -16,12 +16,21 @@ export class UserService {
     return this.http.doGet(this.baseUrl);
   }
 
-  public getUser(index: number): Observable<User> {
-    return this.http.doGet(this.baseUrl + '/' + index);
+  public getUser(id: string): Observable<User> {
+    return this.http.doGet(this.baseUrl + '/' + id);
   }
 
   public addUser(user: User): Observable<User> {
     return this.http.doPost(this.baseUrl, JSON.stringify(user));
+  }
+
+  public deleteUser(id: string): Observable<User> {
+    return this.http.doDelete(this.baseUrl + '/' + id);
+  }
+
+  public updateUser(id: string, user: User): Observable<User> {
+    console.log('UPDATE User Service: ' + id);
+    return this.http.doPut(this.baseUrl + '/' + id, JSON.stringify(user));
   }
 
 }

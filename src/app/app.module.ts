@@ -11,10 +11,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { UserFormComponent } from './user-form/user-form.component'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { UserModifyComponent } from './user-modify/user-modify.component';
+import { UserCreateComponent } from './user-create/user-create.component';
 
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -37,7 +38,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
   declarations: [
     AppComponent,
     UserListComponent,
-    UserFormComponent
+    UserModifyComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,

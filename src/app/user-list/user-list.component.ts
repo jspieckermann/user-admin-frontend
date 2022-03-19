@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../model/model';
 import { UserService } from '../services/user.service';
 
@@ -10,14 +11,26 @@ import { UserService } from '../services/user.service';
 export class UserListComponent implements OnInit {
 
   users: User[] = {} as User[];
-  displayedColumns: string[] = ['id', 'name', 'firstname', 'lastname', 'email'];
+  displayedColumns: string[] = ['id', 'name', 'firstname', 'lastname', 'email', 'delete'];
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private router: Router) {
     
   }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(data => {this.users = data;});
+  }
+
+  onClick(user: User): void {
+      this.router.navigate(['/modify', user.id]);
+  }
+
+  delete(event: any, user: User): void {
+    this.userService.deleteUser(user.id).subscribe(data => { });
+    event.stopPropagation();
+    this.router.navigateByUrl('').then(() => {
+      window.location.reload();
+    });
   }
 
 }
