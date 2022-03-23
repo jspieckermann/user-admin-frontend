@@ -29,7 +29,6 @@ export class UserService {
   }
 
   public updateUser(id: string, user: User): Observable<User> {
-    console.log('UPDATE User Service: ' + id);
     return this.http.doPut(this.baseUrl + '/' + id, JSON.stringify(user));
   }
 

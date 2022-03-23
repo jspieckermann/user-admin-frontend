@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]='userForm' (ngSubmit)="onSubmit()">
+        <div class="input_container">
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput formControlName="name">
+                <mat-error *ngIf="userForm.controls.name.errors">{{getErrorMessageForRequired()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Firstname</mat-label>
+                <input type="text" matInput formControlName="firstname">
+                <mat-error *ngIf="userForm.controls.firstname.errors">{{getErrorMessageForRequired()}}</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Lastname</mat-label>
+                <input type="text" matInput formControlName="lastname">
+                <mat-error *ngIf="userForm.controls.lastname.errors">{{getErrorMessageForRequired()}}</mat-error>
+            </mat-form-field>
+        
+            <mat-form-field appearance="fill">
+                <mat-label>E-Mail</mat-label>
+                <input type="email" matInput formControlName="email">
+                <mat-error *ngIf="userForm.controls.email.errors">{{getErrorMessageForEmail()}}</mat-error>
+            </mat-form-field>       
+        
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input id="password" type="password" matInput formControlName="password">
+                <mat-error *ngIf="userForm.controls.password.errors">{{getErrorMessageForRequired()}}</mat-error>
+            </mat-form-field>    
+        
+            <mat-form-field appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input id="confirm" type="password" matInput formControlName="confirm">
+                <mat-error *ngIf="userForm.controls.confirm.errors">{{getErrorMessageForRepeatPassword()}}</mat-error>
+            </mat-form-field> 
+
+            <mat-checkbox formControlName="administrator">Administrator</mat-checkbox>
+        </div>
+        <div class="button_container">
+            <button mat-raised-button type="submit" [disabled]="!userForm.valid">Submit</button> 
+            <button mat-raised-button type="reset" (click)="onCancel()">Cancel</button> 
+        </div>
+    </form>
+</div>
+

@@ -16,7 +16,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { UserModifyComponent } from './user-modify/user-modify.component';
 import { UserCreateComponent } from './user-create/user-create.component';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { UserFormComponent } from './user-form/user-form.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
@@ -39,7 +40,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
     AppComponent,
     UserListComponent,
     UserModifyComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ function initializeKeycloak(keycloak: KeycloakService) {
     MatButtonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [
     {

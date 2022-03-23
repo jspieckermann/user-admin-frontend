@@ -1,40 +1,4 @@
-<div class="container">
-    <h3>Add User</h3>
-    <form [formGroup]='userForm' (ngSubmit)="onSubmit()">
-        <div class="input_container">
-            <mat-form-field appearance="fill">
-                <mat-label>Username</mat-label>
-                <input type="text" matInput formControlName="name">
-            </mat-form-field>
-        
-            <mat-form-field appearance="fill">
-                <mat-label>Firstname</mat-label>
-                <input type="text" matInput formControlName="firstname">
-            </mat-form-field>
-    
-            <mat-form-field appearance="fill">
-                <mat-label>Lastname</mat-label>
-                <input type="text" matInput formControlName="lastname">
-            </mat-form-field>
-        
-            <mat-form-field appearance="fill">
-                <mat-label>E-Mail</mat-label>
-                <input type="email" matInput formControlName="email">
-            </mat-form-field>       
-        
-            <mat-form-field appearance="fill">
-                <mat-label>Password</mat-label>
-                <input type="password" matInput formControlName="password">
-            </mat-form-field>    
-        
-            <mat-form-field appearance="fill">
-                <mat-label>Confirm Password</mat-label>
-                <input type="password" matInput formControlName="confirm">
-            </mat-form-field> 
-        </div>
-        <div class="button_container">
-            <button mat-raised-button type="submit">Submit</button> 
-            <button mat-raised-button (click)="onCancel()">Cancel</button> 
-        </div>
-    </form>
-</div>
+<h3>Add User</h3>
+<app-user-form (myCancel)="onCancel()" (mySubmit)="onSubmit($event)"></app-user-form>
+
+

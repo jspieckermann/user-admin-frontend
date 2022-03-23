@@ -11,14 +11,14 @@ import { UserService } from '../services/user.service';
 export class UserListComponent implements OnInit {
 
   users: User[] = {} as User[];
-  displayedColumns: string[] = ['id', 'name', 'firstname', 'lastname', 'email', 'delete'];
+  displayedColumns: string[] = ['id', 'name', 'firstname', 'lastname', 'email', 'administrator', 'delete'];
 
   constructor(private userService: UserService, private router: Router) {
-    
+    this.userService.getUsers().subscribe(data => {this.users = data;});
   }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(data => {this.users = data;});
+    
   }
 
   onClick(user: User): void {
