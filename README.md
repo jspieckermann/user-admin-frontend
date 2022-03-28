@@ -7,6 +7,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Preconditions
 ### Keycloak installation and configuration
+* Install Keycloak
+* Add realm '__user-admin-app__'
+* Create client '__user-admin-frontend__'
+  * Enabled: __On__
+  * Client protocol: **openid-connect**
+  * Access Type: **public**
+  * Standard workflow enabled: **On**
+  * Direct Access Grants Enabled: **On**
+  * Root URL: **http://localhost:4200**
+  * Valid Redirect URIs: **http://localhost:4200/***
+  * Admin URL: **http://localhost:4200**
+  * Web Origins: **http://localhost:4200**
 
 ### Running backend
 https://github.com/jspieckermann/user-admin-backend
