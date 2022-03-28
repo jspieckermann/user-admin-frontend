@@ -5,6 +5,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/15320739/160136686-31c829ce-f9ee-4fff-a189-2168c2910f72.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/15320739/160136691-0f2cc9f5-df81-479a-b54f-b4b4ad5688dc.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/15320739/160136692-4236f3f1-5067-457b-8aa9-9cac3df2d8b5.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/15320739/160136696-6d30fb40-94eb-462e-b067-d1031f073b43.png" width="45%"></img> 
 
+## Preconditions
+### Keycloak installation and configuration
+
+### Running backend
+https://github.com/jspieckermann/user-admin-backend
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
