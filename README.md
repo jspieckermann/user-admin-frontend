@@ -19,6 +19,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Valid Redirect URIs: **http://localhost:4200/***
   * Admin URL: **http://localhost:4200**
   * Web Origins: **http://localhost:4200**
+* Create client '__user-admin-backend__'
+  * Enabled: __On__
+  * Client protocol: **openid-connect**
+  * Access Type: **bearer-only**
+* Create client '__user-admin-backend-admin'
+  * Enabled: __On__
+  * Client protocol: **openid-connect**
+  * Access Type: **confidential**
+  * Standard workflow enabled: **On**
+  * Direct Access Grants Enabled: **On**
+  * Root URL: **http://localhost:9090**
+  * Valid Redirect URIs: **http://localhost:9090/***
+  * Admin URL: **http://localhost:9090**
+  * Web Origins: **http://localhost:9090**
+  * Generate __Secret__ in __Credentials tab__
 
 ### Running backend
 https://github.com/jspieckermann/user-admin-backend
