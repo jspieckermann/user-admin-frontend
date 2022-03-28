@@ -23,6 +23,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Enabled: __On__
   * Client protocol: **openid-connect**
   * Access Type: **bearer-only**
+  * Add role __user-admin-user__ and __user-admin-admin__
 * Create client '__user-admin-backend-admin'
   * Enabled: __On__
   * Client protocol: **openid-connect**
@@ -34,6 +35,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   * Admin URL: **http://localhost:9090**
   * Web Origins: **http://localhost:9090**
   * Generate __Secret__ in __Credentials tab__
+* Create at least one user with all __realm management__, __user-admin-user__ and __user-admin-admin__ permissions
+* Used by application: Username: __user2__, Password: __password__
 
 ### Running backend
 https://github.com/jspieckermann/user-admin-backend
