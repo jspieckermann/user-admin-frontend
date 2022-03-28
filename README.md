@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Preconditions
 ### Keycloak installation and configuration
-* Install Keycloak
+* Install Keycloak v17.0
 * Add realm '__user-admin-app__'
 * Create client '__user-admin-frontend__'
   * Enabled: __On__
