@@ -17,9 +17,8 @@ export class UserCreateComponent implements OnInit {
 
   onSubmit(user: User) {
     this.userService.addUser(user).subscribe(data => {
-      this.router.navigateByUrl('').then(() => {
-        window.location.reload();
-      });
+      this.router.navigateByUrl('');
+      this.userService.notifyObservers('Add user');
     });
   }
 
